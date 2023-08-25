@@ -45,7 +45,7 @@ RUN pip install 'deepaas>=0.3.0'
 RUN python -m pip install entry_point_inspector
 
 # Download network weights
-ENV SWIFT_CONTAINER https://cephrgw01.ifca.es:8080/swift/v1/invasoras/
+ENV SWIFT_CONTAINER https://api.cloud.ifca.es:8080/swift/v1/invasoras/
 ENV MODEL_TAR invasoras.tar.gz
 
 RUN curl -o ./image-classification-tf/models/${MODEL_TAR} \
